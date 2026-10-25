@@ -1,86 +1,48 @@
-# Cognifyz Internship
+<h1 align="center">🐍 Cognifyz Python Internship</h1>
 
----
+<p align="center">Thirteen tasks in three levels, from string tricks to a web scraper, an EDA tool and a file organiser.</p>
 
-**Hello Everyone,** 
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3-3776ab" alt="Python">
+  <img src="https://img.shields.io/badge/levels-3-blue" alt="Levels">
+  <img src="https://img.shields.io/badge/tasks-13-brightgreen" alt="Tasks">
+  <img src="https://img.shields.io/badge/status-complete-brightgreen" alt="Complete">
+</p>
 
-Welcome to **Cognifyz Internship Tasks**, a meticulously crafted repository developed as part of my online internship program for Cognifyz Technologies. This repository encompasses a diverse array of tasks, ranging from foundational Python exercises to sophisticated data science projects, designed to develop technical expertise and problem-solving skills.
+## Tasks
 
----
+| Level | Notebook · notes | Tasks |
+|---|---|---|
+| 🟢 **1 · Basics** | [`Task_1.ipynb`](Task_1.ipynb) · [notes](Task_1.md) | String reversal · temperature conversion · email validator (regex) · calculator · palindrome checker |
+| 🟡 **2 · Problem solving** | [`Task_2.ipynb`](Task_2.ipynb) · [notes](Task_2.md) | Guessing game · number guesser · password strength checker · Fibonacci · word count in a file |
+| 🔴 **3 · Applied** | [`Task_3.ipynb`](Task_3.ipynb) · [notes](Task_3.md) | Web scraper (Kathmandu Post articles → CSV) · Iris EDA with Matplotlib / Seaborn · file organiser that sorts a folder by type, with leftovers going to `Others/` |
 
-## Table of Contents
+```mermaid
+flowchart LR
+    L1["Level 1<br/>syntax · strings · regex"] --> L2["Level 2<br/>loops · logic · files"] --> L3["Level 3<br/>scraping · EDA · automation"]
+```
 
-1. [About Cognifyz Technologies](#about-cognifyz-technologies)
-2. [Getting Started](#getting-started)
-3. [Task Overview](#task-overview)
-   - [Level 1 Tasks](#level-1-tasks)
-   - [Level 2 Tasks](#level-2-tasks)
-   - [Level 3 Tasks](#level-3-tasks)
+## Run it
 
----
+```bash
+git clone https://github.com/Alpha107/Cognifyz_Internship_Tasks
+cd Cognifyz_Internship_Tasks
+pip install requests beautifulsoup4 pandas matplotlib seaborn
+jupyter notebook
+```
 
-## About Cognifyz Technologies
+## Status & known issues
 
-Cognifyz Technologies is a leading tech company specializing in data science, artificial intelligence (AI), machine learning (ML), and data analytics tools. Their mission is to deliver innovative solutions to meet the ever-evolving demands of businesses.
+| Issue | Effect |
+|---|---|
+| The old clone command pointed to `Alpha107/Cognifyz` and `cd cognify` | Fixed above |
+| The old README listed 4 Level 2 tasks, but the notebook has 5 (Number Guesser) | Table corrected |
+| Scraper selectors are tied to the Kathmandu Post's HTML | Breaks when the site changes its layout |
+| Plots live only inside `Task_3.ipynb` | Nothing to preview on GitHub without opening the notebook |
+| File organiser moves real files | Try it on a copy of a folder first |
 
-Explore more at: [Cognifyz Official Website](https://cognifyz.com/)
+## Roadmap
 
----
-
-## Getting Started
-
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/Alpha107/Cognifyz
-   cd cognify
-   ```
-
----
-
-## Task Overview
-
-The internship program consists of three levels. Each level is designed to enhance skills progressively.
-
-### Level 1 Tasks
-
-**Beginner-level tasks to strengthen your Python fundamentals.**
-
-| Task No. | Task Name                | Description                                                        |
-|----------|--------------------------|--------------------------------------------------------------------|
-| 1        | String Reversal          | Reverse a given string.                                           |
-| 2        | Temperature Conversion  | Convert temperatures between Celsius and Fahrenheit.              |
-| 3        | Email Validator          | Validate email addresses for proper formatting.                   |
-| 4        | Calculator Program       | Perform basic arithmetic operations (+, -, *, /, %).              |
-| 5        | Palindrome Checker       | Check if a string is a palindrome.                                |
-
-### Level 2 Tasks
-
-**Intermediate-level tasks to apply Python in problem-solving.**
-
-| Task No. | Task Name                | Description                                                        |
-|----------|--------------------------|--------------------------------------------------------------------|
-| 1        | Guessing Game            | Create a number guessing game with feedback.                      |
-| 2        | Password Strength Checker | Evaluate password strength based on various criteria.             |
-| 3        | Fibonacci Sequence       | Generate a Fibonacci sequence up to a given number of terms.      |
-| 4        | File Manipulation        | Count word occurrences in a text file.                            |
-
-### Level 3 Tasks
-
-**Advanced-level tasks to showcase your skills in data science and automation.**
-
-| Task No. | Task Name                | Description                                                        |
-|----------|--------------------------|--------------------------------------------------------------------|
-| 1        | Web Scraper              | Extract specific data from websites using BeautifulSoup or Scrapy.|
-| 2        | Data Visualization Tool  | Create interactive visualizations using Matplotlib or Plotly.     |
-| 3        | Automate a Task          | Automate repetitive tasks using Python scripting.                 |
-
----
-
-### Conclusion 
-Completing the Cognifyz Internship Tasks has been an enriching experience, allowing me to enhance my programming skills across multiple domains, from foundational Python concepts to advanced data science and automation projects. Each task provided valuable hands-on experience, reinforcing my problem-solving abilities and deepening my understanding of real-world applications of technology.
-
-Through this journey, I gained proficiency in Python programming, data manipulation, web scraping, data visualization, and automation—key skills essential for tackling modern-day challenges in AI and data science. This internship has not only strengthened my technical expertise but also encouraged me to think critically and approach problems systematically.
-
-I am grateful for the opportunity to work on these tasks and look forward to applying the knowledge and experience gained in future projects.
-
-Happy Coding! 🚀
+- [ ] Export the Level 3 tools as `.py` scripts with CLI arguments
+- [ ] Add screenshots of the EDA plots
+- [ ] Unit tests for the Level 1–2 functions
